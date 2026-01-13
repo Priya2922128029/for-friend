@@ -1,0 +1,165 @@
+/* MemoryPage.css */
+.memory-page {
+  background: linear-gradient(135deg, #e3f2fd 0%, #f3e5f5 50%, #e8f5e8 100%);
+  position: relative;
+  overflow-x: hidden;
+}
+
+.memory-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.memory-header h1 {
+  font-size: 4rem;
+  color: #5c6bc0;
+  margin-bottom: 1rem;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  text-shadow: 2px 2px 0 rgba(255, 255, 255, 0.8);
+}
+
+.subtitle {
+  font-size: 1.8rem;
+  color: #9575cd;
+  font-style: italic;
+}
+
+.polaroid-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto 3rem;
+  padding: 0 2rem;
+}
+
+.polaroid-card {
+  background: white;
+  padding: 1rem;
+  border-radius: 5px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transform: rotate(var(--rotation, 0deg));
+  position: relative;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.polaroid-card:nth-child(odd) {
+  --rotation: -2deg;
+}
+
+.polaroid-card:nth-child(even) {
+  --rotation: 2deg;
+}
+
+.polaroid-card:hover {
+  transform: rotate(var(--rotation, 0deg)) scale(1.05);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.polaroid-image {
+  height: 200px;
+  background: linear-gradient(45deg, #ffd6e7, #d1c4e9);
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.polaroid-emoji {
+  font-size: 4rem;
+}
+
+.polaroid-caption {
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  font-size: 1.2rem;
+  color: #333;
+  text-align: center;
+  padding: 0.5rem;
+}
+
+.polaroid-tape {
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 20px;
+  background: rgba(255, 255, 255, 0.7);
+  opacity: 0.8;
+  border-radius: 2px;
+}
+
+.memory-conclusion {
+  text-align: center;
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.memory-text {
+  font-size: 2rem;
+  color: #5c6bc0;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+}
+
+.ruined-text {
+  font-size: 2.5rem;
+  color: #ff6b9d;
+  font-weight: bold;
+  animation: shake 0.5s ease-in-out;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-10px); }
+  75% { transform: translateX(10px); }
+}
+
+.navigation-buttons {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 800px;
+  margin-top: 3rem;
+}
+
+.nav-button {
+  padding: 1rem 2rem;
+  border-radius: 25px;
+  text-decoration: none;
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+}
+
+.back-button {
+  background: #e0e0e0;
+  color: #666;
+}
+
+.back-button:hover {
+  background: #d0d0d0;
+  transform: translateX(-5px);
+}
+
+.next-button {
+  background: linear-gradient(45deg, #5c6bc0, #9575cd);
+  color: white;
+}
+
+.next-button:hover {
+  background: linear-gradient(45deg, #9575cd, #5c6bc0);
+  transform: translateX(5px);
+}
+
+.shake {
+  animation: shake 0.5s ease-in-out;
+}

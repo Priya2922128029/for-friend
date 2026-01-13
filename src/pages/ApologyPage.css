@@ -1,0 +1,236 @@
+/* ApologyPage.css */
+.apology-page {
+  background: linear-gradient(135deg, #fff0f7 0%, #f0f8ff 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.glowing-light {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(255, 182, 193, 0.3) 0%, transparent 70%);
+  border-radius: 50%;
+  animation: pulse 3s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 0.5; transform: translate(-50%, -50%) scale(1); }
+  50% { opacity: 0.8; transform: translate(-50%, -50%) scale(1.1); }
+}
+
+.apology-content {
+  text-align: center;
+  max-width: 800px;
+  margin-bottom: 3rem;
+  position: relative;
+  z-index: 2;
+}
+
+.apology-content h1 {
+  font-size: 4rem;
+  color: #ff6b9d;
+  margin-bottom: 2rem;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  text-shadow: 2px 2px 0 rgba(255, 255, 255, 0.8);
+}
+
+.apology-text-container {
+  margin-bottom: 2rem;
+}
+
+.apology-line {
+  font-size: 2.2rem;
+  color: #5c6bc0;
+  margin: 1rem 0;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+}
+
+.promise-section {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  margin-top: 2rem;
+}
+
+.promise-title {
+  font-size: 2rem;
+  color: #ff6b9d;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+.promise-list {
+  list-style: none;
+  padding: 0;
+  margin: 1.5rem 0;
+}
+
+.promise-list li {
+  font-size: 1.8rem;
+  color: #9575cd;
+  margin: 0.8rem 0;
+  padding-left: 2rem;
+  position: relative;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+}
+
+.promise-list li:before {
+  content: "•";
+  color: #ff6b9d;
+  font-size: 2.5rem;
+  position: absolute;
+  left: 0;
+  top: -5px;
+}
+
+.scouts-honor {
+  font-size: 1.8rem;
+  color: #4a6fff;
+  margin-top: 1.5rem;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+}
+
+.small-text {
+  font-size: 1.2rem;
+  color: #888;
+  display: block;
+  margin-top: 0.5rem;
+}
+
+.heart-container {
+  text-align: center;
+  margin: 2rem 0;
+  position: relative;
+  z-index: 2;
+}
+
+.heart {
+  font-size: 8rem;
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.heart.cracked {
+  position: relative;
+}
+
+.crack {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, 
+    transparent 48%, 
+    #000 48%, 
+    #000 52%, 
+    transparent 52%
+  );
+  opacity: 0.3;
+}
+
+.healing-glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 120%;
+  height: 120%;
+  background: radial-gradient(circle, rgba(255, 107, 157, 0.5) 0%, transparent 70%);
+  animation: healing 2s ease-out;
+}
+
+@keyframes healing {
+  0% { transform: translate(-50%, -50%) scale(0); opacity: 0; }
+  50% { opacity: 1; }
+  100% { transform: translate(-50%, -50%) scale(1.5); opacity: 0; }
+}
+
+.heart-instruction {
+  font-size: 1.3rem;
+  color: #666;
+  margin-top: 1rem;
+  font-style: italic;
+}
+
+.forgiveness-button-container {
+  margin: 2rem 0;
+}
+
+.forgiveness-button {
+  background: linear-gradient(45deg, #ff6b9d, #ff8e6b);
+  color: white;
+  border: none;
+  padding: 1.5rem 3rem;
+  font-size: 1.8rem;
+  border-radius: 50px;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  box-shadow: 0 10px 30px rgba(255, 107, 157, 0.4);
+  transition: all 0.3s ease;
+}
+
+.forgiveness-button:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(255, 107, 157, 0.6);
+  background: linear-gradient(45deg, #ff8e6b, #ff6b9d);
+}
+
+.button-sparkles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.button-sparkles .sparkle {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: white;
+  border-radius: 50%;
+  animation: sparkleMove 1.5s infinite;
+}
+
+@keyframes sparkleMove {
+  0% { transform: translate(0, 0) scale(0); opacity: 0; }
+  50% { transform: translate(var(--x, 20px), var(--y, -20px)) scale(1); opacity: 1; }
+  100% { transform: translate(var(--x, 40px), var(--y, -40px)) scale(0); opacity: 0; }
+}
+
+.navigation-buttons {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  max-width: 800px;
+  margin-top: 2rem;
+}
+
+.back-button {
+  background: #e0e0e0;
+  color: #666;
+  padding: 1rem 2rem;
+  border-radius: 25px;
+  text-decoration: none;
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+}
+
+.back-button:hover {
+  background: #d0d0d0;
+  transform: translateX(-5px);
+}

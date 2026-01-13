@@ -1,0 +1,264 @@
+/* FinalPage.css */
+.final-page {
+  background: linear-gradient(135deg, #e8f4fd 0%, #fde8f8 50%, #f8f8e8 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.final-content {
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem;
+  position: relative;
+  z-index: 10;
+}
+
+.final-content h1 {
+  font-size: 5rem;
+  background: linear-gradient(45deg, #ff6b9d, #2196f3, #4caf50);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 3rem;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  text-shadow: 3px 3px 0 rgba(255, 255, 255, 0.5);
+}
+
+.final-message {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 3rem;
+  border-radius: 30px;
+  margin-bottom: 3rem;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.message-line {
+  font-size: 2.5rem;
+  color: #5c6bc0;
+  margin: 1.5rem 0;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+}
+
+.heart-separator {
+  font-size: 4rem;
+  margin: 2rem 0;
+  display: inline-block;
+}
+
+.important-message {
+  font-size: 3rem;
+  color: #333;
+  margin-top: 2rem;
+  line-height: 1.4;
+}
+
+.highlight {
+  color: #ff6b9d;
+  font-weight: bold;
+  text-shadow: 2px 2px 0 rgba(255, 255, 255, 0.5);
+}
+
+.final-thoughts {
+  margin: 3rem 0;
+}
+
+.thought-bubble {
+  background: white;
+  padding: 2rem;
+  border-radius: 50px;
+  position: relative;
+  max-width: 700px;
+  margin: 0 auto 3rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.thought-bubble p {
+  font-size: 1.8rem;
+  color: #666;
+  line-height: 1.6;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+}
+
+.thought-tail {
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-top: 20px solid white;
+}
+
+.sign-off {
+  margin-top: 3rem;
+}
+
+.signature {
+  font-size: 2rem;
+  color: #9575cd;
+  font-style: italic;
+  margin-bottom: 0.5rem;
+}
+
+.friend {
+  font-size: 2.5rem;
+  color: #ff6b9d;
+  font-weight: bold;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+}
+
+.signature-line {
+  width: 300px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #ff6b9d, transparent);
+  margin: 1rem auto;
+}
+
+.final-actions {
+  margin-top: 3rem;
+}
+
+.refresh-message {
+  font-size: 1.5rem;
+  color: #666;
+  margin-bottom: 2rem;
+}
+
+.countdown {
+  font-size: 2rem;
+  color: #ff6b9d;
+  font-weight: bold;
+  animation: countdownPulse 1s infinite;
+}
+
+@keyframes countdownPulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+.action-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin: 2rem 0;
+  flex-wrap: wrap;
+}
+
+.action-button {
+  padding: 1.5rem 3rem;
+  border: none;
+  border-radius: 25px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.replay-button {
+  background: linear-gradient(45deg, #2196f3, #21cbf3);
+  color: white;
+}
+
+.replay-button:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(33, 150, 243, 0.3);
+  background: linear-gradient(45deg, #21cbf3, #2196f3);
+}
+
+.share-button {
+  background: linear-gradient(45deg, #ff6b9d, #ff9eb5);
+  color: white;
+}
+
+.share-button:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(255, 107, 157, 0.3);
+  background: linear-gradient(45deg, #ff9eb5, #ff6b9d);
+}
+
+.final-note {
+  margin-top: 3rem;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 20px;
+}
+
+.final-note p {
+  font-size: 1.5rem;
+  color: #666;
+  margin-bottom: 1rem;
+}
+
+.small-note {
+  font-size: 1.2rem !important;
+  font-style: italic;
+  color: #888 !important;
+  line-height: 1.4;
+}
+
+/* Confetti and effects */
+.confetti-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 5;
+}
+
+.confetti {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  opacity: 0.8;
+  top: -10px;
+  transform-origin: center;
+}
+
+.floating-heart {
+  position: absolute;
+  pointer-events: none;
+  z-index: 2;
+  opacity: 0.7;
+}
+
+.music-notes {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 3;
+}
+
+.music-note {
+  position: absolute;
+  font-size: 2.5rem;
+  bottom: 0;
+  opacity: 0.5;
+}
+
+/* Animation for floating elements */
+@keyframes floatUp {
+  0% {
+    transform: translateY(100px) rotate(0deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100vh) rotate(360deg);
+    opacity: 0;
+  }
+}

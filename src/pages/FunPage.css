@@ -1,0 +1,293 @@
+/* FunPage.css */
+.fun-page {
+  background: linear-gradient(135deg, #fff9c4 0%, #ffecb3 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.fun-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.fun-header h1 {
+  font-size: 4rem;
+  color: #ff9800;
+  margin-bottom: 1rem;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  text-shadow: 2px 2px 0 rgba(255, 255, 255, 0.8);
+}
+
+.subtitle {
+  font-size: 1.8rem;
+  color: #ffb74d;
+  font-style: italic;
+}
+
+.fun-content {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.fun-message {
+  text-align: center;
+  margin-bottom: 3rem;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.fun-text {
+  font-size: 2.2rem;
+  color: #ff6b9d;
+  margin-bottom: 2rem;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  line-height: 1.5;
+}
+
+.smiley-faces {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.smiley {
+  font-size: 3rem;
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+}
+
+.smiley:nth-child(2) { animation-delay: 0.2s; }
+.smiley:nth-child(3) { animation-delay: 0.4s; }
+.smiley:nth-child(4) { animation-delay: 0.6s; }
+.smiley:nth-child(5) { animation-delay: 0.8s; }
+
+.button-game {
+  text-align: center;
+  margin: 3rem 0;
+}
+
+.button-game h3 {
+  font-size: 2rem;
+  color: #5c6bc0;
+  margin-bottom: 2rem;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+}
+
+.button-container {
+  position: relative;
+  height: 400px;
+  margin: 2rem 0;
+  border: 3px dashed #ff9800;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.7);
+}
+
+.mad-button {
+  background: linear-gradient(45deg, #ff5252, #ff4081);
+  color: white;
+  border: none;
+  padding: 1.5rem 3rem;
+  font-size: 1.5rem;
+  border-radius: 25px;
+  cursor: pointer;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  box-shadow: 0 10px 20px rgba(255, 82, 82, 0.3);
+  transition: all 0.3s ease;
+  z-index: 10;
+  white-space: nowrap;
+}
+
+.mad-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 15px 30px rgba(255, 82, 82, 0.4);
+}
+
+.running-feet {
+  display: block;
+  font-size: 1.2rem;
+  margin-top: 0.5rem;
+  animation: run 0.5s infinite;
+}
+
+@keyframes run {
+  0%, 100% { transform: translateX(0); }
+  50% { transform: translateX(5px); }
+}
+
+.forgive-button {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background: linear-gradient(45deg, #4caf50, #2196f3);
+  color: white;
+  border: none;
+  padding: 1.5rem 3rem;
+  font-size: 1.8rem;
+  border-radius: 25px;
+  cursor: pointer;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  box-shadow: 0 10px 30px rgba(76, 175, 80, 0.3);
+  transition: all 0.3s ease;
+  z-index: 5;
+}
+
+.forgive-button:hover {
+  transform: translateX(-50%) scale(1.05);
+  box-shadow: 0 15px 40px rgba(76, 175, 80, 0.4);
+}
+
+.forgive-button.forgiven {
+  background: linear-gradient(45deg, #ff9800, #ff6b9d);
+  animation: celebrate 1s infinite;
+}
+
+@keyframes celebrate {
+  0%, 100% { transform: translateX(-50%) scale(1); }
+  50% { transform: translateX(-50%) scale(1.1); }
+}
+
+.heart-float {
+  position: absolute;
+  top: -20px;
+  right: -20px;
+  font-size: 2rem;
+  animation: floatUp 2s infinite;
+}
+
+@keyframes floatUp {
+  0% { transform: translateY(0) scale(1); opacity: 0; }
+  50% { transform: translateY(-30px) scale(1.2); opacity: 1; }
+  100% { transform: translateY(-60px) scale(0); opacity: 0; }
+}
+
+.game-instruction {
+  font-size: 1.3rem;
+  color: #666;
+  margin-top: 1rem;
+  font-style: italic;
+}
+
+.surprise-message {
+  background: linear-gradient(45deg, #ff9800, #ff6b9d);
+  color: white;
+  padding: 2rem;
+  border-radius: 20px;
+  margin: 2rem 0;
+  box-shadow: 0 15px 40px rgba(255, 152, 0, 0.3);
+}
+
+.surprise-content {
+  text-align: center;
+}
+
+.surprise-emoji {
+  font-size: 4rem;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.surprise-message h3 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+}
+
+.surprise-message p {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.surprise-text {
+  font-size: 1.5rem !important;
+  opacity: 0.9;
+  margin-top: 1rem;
+}
+
+.celebration {
+  background: linear-gradient(45deg, #4caf50, #2196f3, #ff9800);
+  background-size: 200% 200%;
+  animation: gradientShift 3s infinite;
+  color: white;
+  padding: 2rem;
+  border-radius: 20px;
+  margin: 2rem 0;
+}
+
+@keyframes gradientShift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+.celebration-content {
+  text-align: center;
+}
+
+.celebration-content h3 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+}
+
+.celebration-emojis {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.celebration-emoji {
+  font-size: 2.5rem;
+  animation: float 3s infinite ease-in-out;
+}
+
+.floating-emoji {
+  position: absolute;
+  font-size: 2rem;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.navigation-buttons {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1000px;
+  margin-top: 3rem;
+}
+
+.nav-button {
+  padding: 1rem 2rem;
+  border-radius: 25px;
+  text-decoration: none;
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+}
+
+.back-button {
+  background: #e0e0e0;
+  color: #666;
+}
+
+.back-button:hover {
+  background: #d0d0d0;
+  transform: translateX(-5px);
+}
+
+.next-button {
+  background: linear-gradient(45deg, #ff9800, #ff6b9d);
+  color: white;
+}
+
+.next-button:hover {
+  background: linear-gradient(45deg, #ff6b9d, #ff9800);
+  transform: translateX(5px);
+}
